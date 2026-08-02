@@ -1,0 +1,14 @@
+Q2 : 	How many files were saved to OUTPUT_FOLDER?
+Ans : 3
+
+Q3 : What is the value of the min_samples_split parameter
+Ans : 2
+
+Q4 : In addition to backend-store-uri, what else do you need to pass to properly configure the server?
+Ans : default-artifact-root
+
+Q5 : What's the best validation RMSE that you got?
+Ans : 5.335
+
+Q6 : What is the test RMSE of the best model?
+Ans : 5.567408012462019
