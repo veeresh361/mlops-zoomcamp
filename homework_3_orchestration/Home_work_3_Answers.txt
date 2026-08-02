@@ -1,0 +1,11 @@
+Q1: How many records did we load?
+Ans : 3403766
+
+Q2: What's the size of the result?
+Ans : 3316216
+
+Q3: Intercept of the model?
+Ans : 24.77 (my actual value is = 23.848439561549878) Chose the closest one
+
+Q4: What's the size of the model?
+Ans :4,534 (my actual values  Model size in bytes: 4524) Chose the closest one
