@@ -20,7 +20,7 @@ def load_pickle(filename: str):
 @click.command()
 @click.option(
     "--data_path",
-    default="C:\\mlops_boot_camp\\mlops-zoomcamp\\experinment_tracking\\output\\",
+    default="C:\\mlops_boot_camp\\mlops-zoomcamp\\homework_2_experinment_tracking\\output\\",
     help="Location where the processed NYC taxi trip data was saved"
 )
 @click.option(

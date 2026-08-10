@@ -23,6 +23,7 @@ def run_train(data_path: str):
     X_train, y_train = load_pickle(os.path.join(data_path, "train.pkl"))
     X_val, y_val = load_pickle(os.path.join(data_path, "val.pkl"))
     mlflow.set_tracking_uri("http://127.0.0.1:5000")
+    mlflow.set_experiment("nyc-taxi-experiment")
     mlflow.sklearn.autolog()
 
     with mlflow.start_run():

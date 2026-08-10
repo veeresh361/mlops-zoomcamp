@@ -80,6 +80,6 @@ def run_data_prep(raw_data_path: str, dest_path: str, dataset: str = "green"):
 
 
 if __name__ == '__main__':
-    data_path="C:\\mlops_boot_camp\\mlops-zoomcamp\\experinment_tracking\\data\\"
+    data_path="C:\\mlops_boot_camp\\mlops-zoomcamp\\homework_2_experinment_tracking\\data"
     dest_path="C:\\mlops_boot_camp\\mlops-zoomcamp\\experinment_tracking\\output\\"
     run_data_prep(raw_data_path=data_path, dest_path=dest_path, dataset="green")
