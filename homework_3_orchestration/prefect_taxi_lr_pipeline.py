@@ -6,6 +6,7 @@ from prefect import flow, task, get_run_logger
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import root_mean_squared_error
+from mlflow.tracking import MlflowClient
 import mlflow
 
 
@@ -13,7 +14,7 @@ import mlflow
 # Configuration
 # -----------------------------
 mlflow.set_tracking_uri("http://localhost:5000")
-mlflow.set_experiment("nyc-taxi-prefect-linear-regression_2")
+mlflow.set_experiment("nyc-taxi-prefect-linear-regression_3")
 
 MODELS_FOLDER = Path("models")
 MODELS_FOLDER.mkdir(exist_ok=True)
@@ -29,7 +30,8 @@ def load_raw_data(file_path: str) -> pd.DataFrame:
 
     df = pd.read_parquet(file_path)
 
-    print(f"Q1: How many records did we load? {len(df)}")
+    print(f"Q3: How many records did we load?")
+    print(f"Number of records loaded: {len(df)}")
     logger.info(f"Raw records loaded: {len(df)}")
 
     return df
@@ -47,7 +49,8 @@ def read_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     df = df[(df.duration >= 1) & (df.duration <= 60)]
     categorical = ['PULocationID', 'DOLocationID']
     df[categorical] = df[categorical].astype(str)
-    print(f"Q2: After applying read_dataframe, number of rows = {len(df)}")
+    print(f"Q4: What's the size of the result?")
+    print(f"Records after preprocessing: {len(df)}")
     logger.info(f"Records after preprocessing: {len(df)}")
     return df
 
@@ -81,7 +84,8 @@ def train_model(X_train, y_train):
     model = LinearRegression()
     model.fit(X_train, y_train)
 
-    print(f"Q3: Intercept of the model = {model.intercept_}")
+    print(f"Q5: What's the intercept of the model?")
+    print(f"Model intercept: {model.intercept_}")
     logger.info(f"Model intercept: {model.intercept_}")
 
     return model
