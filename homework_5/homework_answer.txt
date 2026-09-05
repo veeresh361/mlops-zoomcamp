@@ -1,0 +1,10 @@
+Q2. Metric
+Let's expand the number of data quality metrics we’d like to monitor! Please add one metric of your choice and a quantile value for the "fare_amount" column (quantile=0.5).
+
+answer : I added ColumnQuantileMetric(column_name="fare_amount", quantile=0.5) to monitor the median fare
+        amount, and I chose ColumnMissingValuesMetric(column_name="fare_amount") as the additional data quality metric.
+
+
+Q4. Dashboard
+Where to place a dashboard config file?
+answer : project_folder/dashboards (05-monitoring/dashboards)
