@@ -57,5 +57,5 @@ print(f'Standard deviation of the predicted duration: {std_pred}')
 
 # print('scikit-learn Hash:',lock_data["default"]["scikit-learn"]["hashes"][0])
 
-import sklearn
-print(sklearn.__version__)
+# import sklearn
+# print(sklearn.__version__)
